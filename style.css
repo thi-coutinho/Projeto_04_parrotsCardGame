@@ -30,6 +30,19 @@ body {
     margin: auto;
 }
 
+.carta .verso{
+    display:block;
+    /* display:none; */
+}
+
+.carta .frente{
+    /* display:block; */
+    display:none;
+}
+.escodido{
+    display:none;
+}
+
 h1 {
     color: #75B79E;
     margin: 40px auto 47px;
