@@ -24,24 +24,36 @@ body {
     border: 1px solid #99CEA8;
     border-radius: 5px;
     display: flex;
+    transition: all 1s;
+    overflow:hidden;
+    
 }
-.carta img {
+img.escondido{
+    width:0;
+    height:100px;
+    transition: all 350ms;
+    transition-delay: 50ms;
+    
+}
+img{
     width: 100px;
+    height:100px;
     margin: auto;
+    transition: all 500ms;
+    transition-delay: 250ms;
 }
 
-.carta .verso{
-    display:block;
-    /* display:none; */
+.carta.roda{
+    transform: rotateY(180deg);
+  }
+
+.verso .acerto{
+    width:0;
+}
+.frente .acerto{
+    width: 100px;
 }
 
-.carta .frente{
-    /* display:block; */
-    display:none;
-}
-.escodido{
-    display:none;
-}
 
 h1 {
     color: #75B79E;
