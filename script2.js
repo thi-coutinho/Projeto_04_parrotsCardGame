@@ -25,3 +25,27 @@ function perguntaInicial(texto){
     }
     return resposta
 }
+
+
+function virarCarta(carta) {
+    carta.classList.toggle("roda")
+    const verso = carta.querySelector(".verso");
+    const frente = carta.querySelector(".frente");
+    verso.classList.toggle("escondido")
+    frente.classList.toggle("escondido")
+}
+
+function cartaCerta(carta){
+    carta.onclick = ""
+    const verso = carta.querySelector(".verso");
+    const frente = carta.querySelector(".frente");
+    verso.classList.toggle("acerto")
+    frente.classList.toggle("acerto")
+}
+
+function addTimer(){
+    const timer = document.querySelector(".timer");
+    timer.innerHTML=seg
+    seg++
+    numeroCartas==0? clearInterval(codInterval):""
+}
