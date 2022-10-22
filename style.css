@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-    padding: 0 110px;
+    /* padding: 0 10%; */
 
 }
 .game{
@@ -43,18 +43,19 @@ body {
     
 }
 img.escondido{
-    width:0;
-    height:100px;
-    transition: all 350ms;
-    transition-delay: 50ms;
+    display: none;
+    /* width:0;
+    height:100px; */
+    /* transition: all 350ms;
+    transition-delay: 50ms; */
     
 }
 img{
     width: 100px;
     height:100px;
     margin: auto;
-    transition: all 500ms;
-    transition-delay: 250ms;
+    /* transition: all 500ms; */
+    /* transition-delay: 250ms; */
 }
 
 .carta.roda{
@@ -62,7 +63,8 @@ img{
   }
 
 .verso .acerto{
-    width:0;
+    display: none;
+    /* width:0; */
 }
 .frente .acerto{
     width: 100px;

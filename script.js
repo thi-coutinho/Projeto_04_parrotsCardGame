@@ -14,7 +14,7 @@ iniciaJogo();
 function iniciaJogo() {
     game.innerHTML = "";
     numJogadas = 0;
-    codInterval=undefined;
+    codInterval = undefined;
     cartaSelecionadaAntes = undefined;
     seg = 0;
     listaCartasImgFrente = [1, 2, 3, 4, 5, 6, 7]
@@ -22,7 +22,7 @@ function iniciaJogo() {
 
     // embaralhamos para cada jogo ter cartas diferentes
     embaralhaLista(listaCartasImgFrente)
-
+    
     // precisamos tiras algumas cartas de acordo com o que o usuário informou
     listaCartasImgFrente = listaCartasImgFrente.slice(7 - numeroCartas / 2)
     // duplicamos as lista de cartas concatenando ela com ela mesma para formar os pares
@@ -40,11 +40,27 @@ function iniciaJogo() {
                        </div>
                         `
     }
+    /*----------------------------------------------------------------
+    outra possibilidade é embaralhar a própria lista de filhos do game:
+    const listaFilhos = [...game.children]
+    embaralhaLista(listaFilhos)
+    game.replaceChildren(...listaFilhos)
+    
+    */
+
+
 }
+
+/**
+ * faz a análise da carta em relação a última carta escolhida e faz 
+ * a carta virar ou desvirar conforme o jogo
+ * @param {objetoHmtl} novaCarta 
+ */
+ 
 
 function fazerJogada(novaCarta) {
     // a primeira jogada aciona o timer
-    
+
     codInterval = numJogadas === 0 ? setInterval(addTimer, 1000) : codInterval
 
     if (cartaSelecionadaAntes === novaCarta) {

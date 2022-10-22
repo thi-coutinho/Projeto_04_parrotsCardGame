@@ -1,8 +1,11 @@
 // funções auxiliares
 
-
+/**
+ * embaralha lista
+ * @param {list} lista
+ */
 function embaralhaLista(lista) {
-    // recebe uma lista e embaralha ela aleatoriamente inplace
+    /*recebe uma lista e embaralha ela aleatoriamente inplace*/
     function comparador() { 
         return Math.random() - 0.5; 
     }
@@ -31,8 +34,11 @@ function virarCarta(carta) {
     carta.classList.toggle("roda")
     const verso = carta.querySelector(".verso");
     const frente = carta.querySelector(".frente");
-    verso.classList.toggle("escondido")
-    frente.classList.toggle("escondido")
+    function esconder(lado){
+        lado.classList.toggle("escondido")
+    }
+    setTimeout( esconder,300,verso)
+    setTimeout( esconder,300,frente)
 }
 
 function cartaCerta(carta){
